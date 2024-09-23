@@ -53,7 +53,7 @@ const donateBtnNoakhali = document
     donateHistoryList.className = "bg-white p-4 border rounded-md";
     const heading = document.getElementById("noakhali-heading").innerText;
     donateHistoryList.innerHTML = `
-     <p class="text-2xl">${currentBalance.toFixed(2)} Taka is ${heading} </p>
+     <p class="text-2xl">${donationAmount.toFixed(2)} Taka is ${heading} </p>
         <p class="text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
      `;
     const donateHistoryContainer = document.getElementById("history-section");
@@ -83,15 +83,13 @@ const donateBtnFeni = document
     const totalDonation = getValueByInnerText("total-donation-feni");
     const newTotalDonation = donationAmount + totalDonation;
     document.getElementById("total-donation-feni").innerText = newTotalDonation;
-    console.log(balance, donationAmount, currentBalance);
-    console.log("clicked");
     showAndHide("modal");
     /* history */
     const donateHistoryList = document.createElement("div");
     donateHistoryList.className = "bg-white p-4 border rounded-md";
     const heading = getInnerText("feni-heading");
     donateHistoryList.innerHTML = `
-     <p class="text-2xl">${currentBalance.toFixed(2)} Taka is ${heading} </p>
+     <p class="text-2xl">${donationAmount.toFixed(2)} Taka is ${heading} </p>
         <p class="text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
      `;
     const donateHistoryContainer = document.getElementById("history-section");
@@ -123,8 +121,6 @@ const donateBtnQuota = document
     const newTotalDonation = donationAmount + totalDonation;
     document.getElementById("total-donation-quota").innerText =
       newTotalDonation;
-    console.log(balance, donationAmount, currentBalance);
-    console.log("clicked");
     /* modal */
     showAndHide("modal");
     /* history */
@@ -132,7 +128,7 @@ const donateBtnQuota = document
     donateHistoryList.className = "bg-white p-4 border rounded-md";
     const heading = getInnerText("quota-heading");
     donateHistoryList.innerHTML = `
-     <p class="text-2xl">${currentBalance.toFixed(2)} Taka is ${heading} </p>
+     <p class="text-2xl">${donationAmount.toFixed(2)} Taka is ${heading} </p>
         <p class="text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
      `;
     const donateHistoryContainer = document.getElementById("history-section");
