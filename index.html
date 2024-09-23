@@ -15,7 +15,7 @@
     <main>
       <!-- navbar -->
       <nav class="flex bg-[#F9F7F3] justify-around items-center py-5">
-        <button class="btn w-20 bg-[#B4F461] border-none text-black">
+        <button class="btn w-20 custom-green border-none text-black">
          <a href="indexTwo.html">Blog</a>
         </button>
         <div class="flex items-center gap-2">
@@ -25,22 +25,22 @@
         <div class="flex items-center gap-2">
           <img src="assets/coin.png" alt="coin_icon" />
           <!-- important -->
-          <p>5500</p>
-          <span>BDT</span>
+          <p id="balance" class="font-bold text-[#111111B3]" >5500</p>
+          <span class="font-bold text-[#111111B3]" >BDT</span>
         </div>
       </nav>
       <!-- navbar end -->
       <!-- button section to hide and show -->
       <div class="flex justify-center items-center pt-10 pb-5 gap-5">
-        <button class="btn w-32 bg-[#B4F461] border-none text-black">
+        <button id="donation-btn" class="btn w-32 bg-custom-green border-none text-black">
           Donation
         </button>
-        <button class="btn w-32 border-1 border-black bg-white text-black">
+        <button id="history-btn" class="btn w-32 border-1 border-black bg-white text-black">
           History
         </button>
       </div>
       <!-- button section end -->
-      <section class="space-y-5">
+      <section id="donation-section" class="space-y-5">
         <!-- Noakhali starts-->
         <div class="container mx-auto border rounded-xl border-[#1111111A]">
           <div class="hero p-3">
@@ -52,7 +52,7 @@
                 >
                   <img src="assets/coin.png" alt="coin_icon" />
                   <!-- important -->
-                  <p class="text-md">0</p>
+                  <p id="total-donation-noakhali" class="text-md">0</p>
                   <span class="text-md">BDT</span>
                 </div>
                 <h1 class="text-xl font-bold">
@@ -70,6 +70,7 @@
                 <div class="form-control">
                   <input
                     type="number"
+                    id="donation-amount-noakhali"
                     placeholder="Write Donation Amount"
                     class="input input-bordered"
                     required
@@ -77,7 +78,7 @@
                   <!-- important -->
                 </div>
                 <div class="form-control mt-6">
-                  <button class="btn bg-[#B4F461] border-none text-black">
+                  <button id="donate-btn-noakhali" class="btn custom-green border-none text-black">
                     Donate Now
                   </button>
                 </div>
@@ -117,7 +118,7 @@
                     <!-- important -->
                   </div>
                   <div class="form-control mt-6">
-                    <button class="btn bg-[#B4F461] border-none text-black">
+                    <button class="btn custom-green border-none text-black">
                       Donate Now
                     </button>
                   </div>
@@ -158,7 +159,7 @@
                     <!-- important -->
                   </div>
                   <div class="form-control mt-6">
-                    <button class="btn bg-[#B4F461] border-none text-black">
+                    <button class="btn custom-green border-none text-black">
                       Donate Now
                     </button>
                   </div>
@@ -171,5 +172,6 @@
       <footer class="bg-[#F9F7F3] mt-16 h-32"></footer>
     </main>
     <script src="js/script.js"></script>
+    <script src="js/commonFunction.js"></script>
   </body>
 </html>
