@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flood Donation</title>
-    <style>
-      .custom-green {
-        background-color: #B4F461;
-      }
-    </style>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            customGreen: '#B4F461',
+          },
+        },
+      },
+      variants: {},
+      plugins: [],
+    };
+    
+    </script>
   </head>
   <body>
     <main>
@@ -37,7 +45,7 @@
       <!-- navbar end -->
       <!-- button section to hide and show -->
       <div class="flex sticky top-28 bg-white bg-opacity-60 justify-center items-center pt-16 pb-10 gap-5">
-        <button id="donation-btn" class="btn w-32 bg-purple-500 border-none text-black">
+        <button id="donation-btn" class="btn w-32 bg-customGreen border-none text-black">
           Donation
         </button>
         <button id="history-btn" class="btn w-32 border-1 border-black bg-white text-black">

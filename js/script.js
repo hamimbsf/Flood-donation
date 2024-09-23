@@ -2,8 +2,8 @@ let donationBtn = document.getElementById("donation-btn");
 let historyBtn = document.getElementById("history-btn");
 historyBtn.addEventListener("click", function () {
   historyBtn.classList.remove("bg-white", "border-black");
-  historyBtn.classList.add("bg-purple-500", "border-none");
-  donationBtn.classList.remove("bg-purple-500", "border-none");
+  historyBtn.classList.add("bg-customGreen", "border-none");
+  donationBtn.classList.remove("customGreen", "border-none");
   donationBtn.classList.add("bg-white", "border-black");
 
   // hide the donation section and show the history section
@@ -14,8 +14,8 @@ historyBtn.addEventListener("click", function () {
 });
 donationBtn.addEventListener("click", function () {
   donationBtn.classList.remove("bg-white", "border-black");
-  donationBtn.classList.add("bg-purple-500", "border-none");
-  historyBtn.classList.remove("bg-purple-500", "border-none");
+  donationBtn.classList.add("bg-customGreen", "border-none");
+  historyBtn.classList.remove("bg-customGreen", "border-none");
   historyBtn.classList.add("bg-white", "border-black");
 
   // hide the history section and show the donation section
