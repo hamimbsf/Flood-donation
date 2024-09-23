@@ -38,3 +38,41 @@ document
     document.getElementById("total-donation-noakhali").innerText = newTotalDonation;
     // console.log(balance, donationAmount, currentBalance);
   });
+document
+  .getElementById("donate-btn-feni")
+  .addEventListener("click", function () {
+    const balance = getValueByInnerText("balance");
+    const donationAmount = getValueById("donation-amount-feni");
+    if (balance < donationAmount) {
+      alert("You don't have enough balance");
+      return;
+    }
+
+    const currentBalance = balance - donationAmount;
+    document.getElementById("balance").innerText = currentBalance;
+    const totalDonation = getValueByInnerText("total-donation-feni");
+    const newTotalDonation = donationAmount + totalDonation;
+    document.getElementById("total-donation-feni").innerText = newTotalDonation;
+    console.log(balance, donationAmount, currentBalance);
+    console.log("clicked");
+    
+  });
+document
+  .getElementById("quota-donate-btn")
+  .addEventListener("click", function () {
+    const balance = getValueByInnerText("balance");
+    const donationAmount = getValueById("donation-amount-quota");
+    if (balance < donationAmount) {
+      alert("You don't have enough balance");
+      return;
+    }
+
+    const currentBalance = balance - donationAmount;
+    document.getElementById("balance").innerText = currentBalance;
+    const totalDonation = getValueByInnerText("total-donation-quota");
+    const newTotalDonation = donationAmount + totalDonation;
+    document.getElementById("total-donation-quota").innerText = newTotalDonation;
+    console.log(balance, donationAmount, currentBalance);
+    console.log("clicked");
+    
+  });
