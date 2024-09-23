@@ -35,7 +35,7 @@ const donateBtnNoakhali = document
       return;
     }
     /* conditions */
-    if (isNaN(donationAmount)) {
+    if (isNaN(donationAmount) || donationAmount <= 0) {
       alert("Please give number");
       return;
     }
@@ -73,7 +73,7 @@ const donateBtnFeni = document
       return;
     }
     /* conditions */
-    if (isNaN(donationAmount)) {
+    if (isNaN(donationAmount) || donationAmount <= 0) {
       alert("Please give number");
       return;
     }
@@ -110,7 +110,7 @@ const donateBtnQuota = document
       return;
     }
     /* conditions */
-    if (isNaN(donationAmount)) {
+    if (isNaN(donationAmount) || donationAmount <= 0) {
       alert("Please give number");
       return;
     }
