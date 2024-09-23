@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="flex bg-[#F9F7F3] justify-start items-center py-5">
-        <button class="btn w-20 lg:ml-40 ml-10 bg-[#B4F461] border-none text-black"><a href="index.html">Home</a></button>
+      <a href="index.html">
+        <button
+          class="btn w-20 lg:ml-40 ml-10 bg-[#B4F461] border-none text-black"
+        >
+          Home
+        </button>
+      </a>
     </nav>
-    <section class="container mx-auto mt-10">
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
+
+    <section class="container px-5 mx-auto mt-10">
+      <h1 class="text-5xl mb-10 font-bold">Import FAQ <i class="fa-regular fa-comment-dots"></i></h1>
+      <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is Document Object MOdel(DOM)
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
+          <div class="collapse-content">
+            <p>
+              Document Object Model is a programming interface for web
+              documents. It represents the structure of an HTML document as a
+              tree of objects, where each node in the tree corresponds to a part
+              of the document (such as elements, attributes, or text).
+            </p>
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from DOM?
           </div>
+          <div class="collapse-content">
+            <p>
+              There is many way to select any element in DOM but I prefer
+              document.getElementById("") && document.querySelector
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            What is Event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation is a design pattern in JavaScript that allows
+              efficient event handling for multiple child elements by attaching
+              a single event listener to a common parent or ancestor element,It
+              is useful Because Event delegation can handle events for all of
+              its child elements and even ones added dynamically
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element attributes and styles using DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              I can manipulate an element by using its id ,className and tagName
+              and if I want yo add styles then I select that element by using
+              document.getElementById("") and if i use tailwind css I use
+              .classList.add("","")
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <div class="w-1/3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-5 mx-auto shadow-2xl py-8 rounded-xl text-center">
-
-      <h1 class="text-6xl font-bold">Congrates!</h1>
-      <img class="mx-auto" src="assets/coin.png" alt="coin_icon">
-      <p>You Have Donated for Humankind</p>
-      <h2 class="text-2xl font-bold">Successfully</h2>
-      <button class="btn font-bold">close confirmation</button>
-    </div>
-</body>
+  </body>
 </html>

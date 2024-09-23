@@ -8,6 +8,8 @@ historyBtn.addEventListener("click", function () {
   // hide the donation section and show the history section
   const donationSection = document.getElementById("donation-section");
   donationSection.classList.add("hidden");
+  const showHistorySection = document.getElementById("history-section");
+  showHistorySection.classList.remove("hidden");
 });
 donationBtn.addEventListener("click", function () {
   // donationBtn.classList.add("custom-green", "border-none");
@@ -17,11 +19,13 @@ donationBtn.addEventListener("click", function () {
   // hide the history section and show the donation section
   const donationSection = document.getElementById("donation-section");
   donationSection.classList.remove("hidden");
+  const showHistorySection = document.getElementById("history-section");
+  showHistorySection.classList.add("hidden");
 });
 
 /* Calculation and Condition logics */
 
-document
+const donateBtnNoakhali = document
   .getElementById("donate-btn-noakhali")
   .addEventListener("click", function () {
     const balance = getValueByInnerText("balance");
@@ -30,21 +34,47 @@ document
       alert("You don't have enough balance");
       return;
     }
-
+    /* conditions */
+    if (isNaN(donationAmount)) {
+      alert("Please give number");
+      return;
+    }
+    /* conditions */
     const currentBalance = balance - donationAmount;
     document.getElementById("balance").innerText = currentBalance;
     const totalDonation = getValueByInnerText("total-donation-noakhali");
     const newTotalDonation = donationAmount + totalDonation;
-    document.getElementById("total-donation-noakhali").innerText = newTotalDonation;
-    // console.log(balance, donationAmount, currentBalance);
+    document.getElementById("total-donation-noakhali").innerText =
+      newTotalDonation;
+    showAndHide("modal");
+
+    /* history */
+    const donateHistoryList = document.createElement("div");
+    donateHistoryList.className = "bg-white p-4 border rounded-md";
+    const heading = document.getElementById("noakhali-heading").innerText;
+    donateHistoryList.innerHTML = `
+     <p class="text-2xl">${currentBalance.toFixed(2)} Taka is ${heading} </p>
+        <p class="text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
+     `;
+    const donateHistoryContainer = document.getElementById("history-section");
+    donateHistoryContainer.insertBefore(
+      donateHistoryList,
+      donateHistoryContainer.firstChild
+    );
   });
-document
+const donateBtnFeni = document
   .getElementById("donate-btn-feni")
   .addEventListener("click", function () {
     const balance = getValueByInnerText("balance");
     const donationAmount = getValueById("donation-amount-feni");
+    /* conditions */
     if (balance < donationAmount) {
       alert("You don't have enough balance");
+      return;
+    }
+    /* conditions */
+    if (isNaN(donationAmount)) {
+      alert("Please give number");
       return;
     }
 
@@ -55,15 +85,35 @@ document
     document.getElementById("total-donation-feni").innerText = newTotalDonation;
     console.log(balance, donationAmount, currentBalance);
     console.log("clicked");
-    
+    showAndHide("modal");
+    /* history */
+    const donateHistoryList = document.createElement("div");
+    donateHistoryList.className = "bg-white p-4 border rounded-md";
+    const heading = getInnerText("feni-heading");
+    donateHistoryList.innerHTML = `
+     <p class="text-2xl">${currentBalance.toFixed(2)} Taka is ${heading} </p>
+        <p class="text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
+     `;
+    const donateHistoryContainer = document.getElementById("history-section");
+    donateHistoryContainer.insertBefore(
+      donateHistoryList,
+      donateHistoryContainer.firstChild
+    );
   });
-document
+
+const donateBtnQuota = document
   .getElementById("quota-donate-btn")
   .addEventListener("click", function () {
     const balance = getValueByInnerText("balance");
     const donationAmount = getValueById("donation-amount-quota");
+    /* conditions */
     if (balance < donationAmount) {
       alert("You don't have enough balance");
+      return;
+    }
+    /* conditions */
+    if (isNaN(donationAmount)) {
+      alert("Please give number");
       return;
     }
 
@@ -71,8 +121,29 @@ document
     document.getElementById("balance").innerText = currentBalance;
     const totalDonation = getValueByInnerText("total-donation-quota");
     const newTotalDonation = donationAmount + totalDonation;
-    document.getElementById("total-donation-quota").innerText = newTotalDonation;
+    document.getElementById("total-donation-quota").innerText =
+      newTotalDonation;
     console.log(balance, donationAmount, currentBalance);
     console.log("clicked");
-    
+    /* modal */
+    showAndHide("modal");
+    /* history */
+    const donateHistoryList = document.createElement("div");
+    donateHistoryList.className = "bg-white p-4 border rounded-md";
+    const heading = getInnerText("quota-heading");
+    donateHistoryList.innerHTML = `
+     <p class="text-2xl">${currentBalance.toFixed(2)} Taka is ${heading} </p>
+        <p class="text-gray-500">Date: ${new Date().toLocaleDateString()}</p>
+     `;
+    const donateHistoryContainer = document.getElementById("history-section");
+    donateHistoryContainer.insertBefore(
+      donateHistoryList,
+      donateHistoryContainer.firstChild
+    );
   });
+/* close modal */
+document.getElementById("close-modal").addEventListener("click", function () {
+  const modal = document.getElementById("modal");
+  modal.classList.remove("flex");
+  modal.classList.add("hidden");
+});

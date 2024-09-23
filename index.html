@@ -12,13 +12,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <main class="">
+    <main>
       <!-- navbar -->
       <nav class="flex sticky top-0 -inset-10 bg-[#F9F7F3] justify-around items-center pt-5 pb-10 bg-opacity-90">
-        <button class="btn w-20 bg-[#B4F461] border-none text-black">
-         <a href="indexTwo.html">Blog</a>
-        </button>
-        <div class="flex items-center gap-2">
+        <a href="indexTwo.html"><button class="btn w-20 bg-[#B4F461] border-none text-black">Blog</button>
+        </button></a>
+        
+        <div class="lg:flex items-center hidden gap-2">
           <img src="assets/logo.png" alt="logo_icon" />
           <h2 class="font-bold">Donate Bangladesh</h2>
         </div>
@@ -31,7 +31,7 @@
       </nav>
       <!-- navbar end -->
       <!-- button section to hide and show -->
-      <div class="flex justify-center items-center pt-10 pb-5 gap-5">
+      <div class="flex justify-center items-center pt-20 pb-10 gap-5">
         <button id="donation-btn" class="btn w-32 bg-[#B4F461] border-none text-black">
           Donation
         </button>
@@ -42,20 +42,20 @@
       <!-- button section end -->
       <section id="donation-section" class="space-y-5">
         <!-- Noakhali starts-->
-        <div class="container mx-auto border rounded-xl border-[#1111111A]">
-          <div class="p-4">
-            <div class="container mx-auto gap-10 flex justify-center lg:flex-row ">
-              <img src="assets/noakhali.png" class="rounded-lg w-1/2 shadow-2xl" />
-              <div class="w-1/2 space-y-6 flex flex-col justify-center">
+        <div class="container border mx-auto rounded-xl border-[#1111111A]">
+          <div class="p-8">
+            <div class="container mx-auto gap-10 flex flex-col lg:flex-row justify-center">
+              <img src="assets/noakhali.png" class="rounded-lg w-full lg:w-1/2 shadow-2xl" />
+              <div class="lg:w-1/2 w-full space-y-6 flex flex-col justify-center">
                 <div
-                  class="flex items-center mb-4 bg-[#1111110D] h-16 rounded-lg btn w-1/4 gap-2"
+                  class="flex items-center mb-4 bg-[#1111110D] h-16 rounded-lg btn lg:w-1/4 w-1/2 gap-2"
                 >
                   <img src="assets/coin.png" alt="coin_icon" />
                   <!-- important -->
                   <p id="total-donation-noakhali" class="text-md">0</p>
                   <span class="text-md">BDT</span>
                 </div>
-                <h1 class="text-2xl font-bold">
+                <h1 id="noakhali-heading" class="text-2xl font-bold">
                   Donate for Flood at Noakhali, Bangladesh
                 </h1>
                 <p class="py-4 text-lg">
@@ -89,19 +89,19 @@
         <!-- Noakhali section end -->
          <!-- Feni section starts -->
          <div class="container mx-auto border rounded-xl border-[#1111111A]">
-            <div class="p-4">
-              <div class="container mx-auto gap-10 flex justify-center lg:flex-row">
-                <img src="assets/feni.png" class="rounded-lg w-1/2 shadow-2xl" />
-                <div class="w-1/2 space-y-6 flex flex-col justify-center">
+            <div class="p-8">
+              <div class="container mx-auto gap-10 flex flex-col justify-center lg:flex-row">
+                <img src="assets/feni.png" class="rounded-lg lg:w-1/2 w-full shadow-2xl" />
+                <div class="lg:w-1/2 w-full space-y-6 flex flex-col justify-center">
                   <div
-                    class="flex items-center mb-4 h-16 bg-[#1111110D] rounded-lg btn w-1/4 gap-2"
+                    class="flex items-center mb-4 h-16 bg-[#1111110D] rounded-lg btn lg:w-1/4 w-1/2 gap-2"
                   >
                     <img src="assets/coin.png" alt="coin_icon" />
                     <!-- important -->
                     <p id="total-donation-feni" class="text-md">600</p>
                     <span class="text-md">BDT</span>
                   </div>
-                  <h1 class="text-2xl font-bold">
+                  <h1 id="feni-heading" class="text-2xl font-bold">
                     Donate for Flood Relief in Feni,Bangladesh
                   </h1>
                   <p class="text-lg">
@@ -130,20 +130,20 @@
           <!-- Feni end -->
 
            <!-- Quota section starts -->
-           <div class="container mx-auto border rounded-xl border-[#1111111A]">
-            <div class="p-4">
-              <div class="container mx-auto gap-10 flex justify-center lg:flex-row">
-                <img src="assets/quota-protest.png" class="rounded-lg w-1/2 shadow-2xl" />
-                <div class="w-1/2 space-y-6 flex flex-col justify-center">
+           <div class="container border mx-auto rounded-xl border-[#1111111A]">
+            <div class="p-8">
+              <div class="container mx-auto gap-10 flex flex-col justify-center lg:flex-row">
+                <img src="assets/quota-protest.png" class="rounded-lg lg:w-1/2 w-full shadow-2xl" />
+                <div class="lg:w-1/2 w-full space-y-6 flex flex-col justify-center">
                   <div
-                    class="flex items-center mb-4 bg-[#1111110D] rounded-lg h-16 btn w-1/4 gap-2"
+                    class="flex items-center mb-4 bg-[#1111110D] rounded-lg h-16 btn lg:w-1/4 w-1/2 gap-2"
                   >
                     <img src="assets/coin.png" alt="coin_icon" />
                     <!-- important -->
                     <p id="total-donation-quota" class="text-md">2400</p>
                     <span class="text-md">BDT</span>
                   </div>
-                  <h1 class="text-2xl font-bold">
+                  <h1 id="quota-heading" class="text-2xl font-bold">
                     Aid for Injured in the Quota Movement
                   </h1>
                   <p class="py-4 text-lg">
@@ -170,7 +170,22 @@
             </div>
           </div>
           <!-- Quota section end -->
-      </section>
+           <!-- modal -->
+           <div id="modal" class="fixed left-0 top-0 w-screen hidden h-screen justify-center items-center">
+            <div
+           class="bg-white rounded flex flex-col items-center space-y-2 shadow-2xl p-8 lg:w-[30%]"
+         >
+           <h1 class="text-6xl font-bold">Congrates!</h1>
+           <img class="mx-auto" src="assets/coin.png" alt="coin_icon" />
+           <p>You Have Donated for Humankind</p>
+           <h2 class="text-2xl font-bold">Successfully</h2>
+           <button id="close-modal" class="btn font-bold">close confirmation</button>
+         </div>
+           </div>
+
+           <!-- history tab show -->
+          </section>
+          <div id="history-section" class="container mx-auto hidden space-y-6"></div>
       <footer class="bg-[#F9F7F3] mt-16 h-32"></footer>
     </main>
     <script src="js/script.js"></script>
